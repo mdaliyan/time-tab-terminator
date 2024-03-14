@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "TimeTabTerminator",
+  "version": "1.0",
+  "description": "Automatically closes tabs after a configurable time period to keep your browser tidy and improve performance.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png",
+    "256": "icons/icon256.png",
+    "512": "icons/icon512.png"
+  },
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "options_page": "src/options/options.html",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png",
+      "256": "icons/icon256.png",
+      "512": "icons/icon512.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
